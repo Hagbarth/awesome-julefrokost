@@ -1,0 +1,21 @@
+{
+  "name": "awesome-julefrokost",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-react-app": "^6.1.0",
+    "howler": "^2.0.15",
+    "luxon": "^1.7.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.7"
+  }
+}
