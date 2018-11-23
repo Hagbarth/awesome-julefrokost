@@ -44,10 +44,7 @@ function makeCounter(timeout) {
 
 const Counter = ({ remaining, playing }) => {
   return (
-    <div>
-      <h2>Counter:</h2>
-      {Duration.fromObject({ seconds: remaining }).toFormat("mm:ss")}
-    </div>
+    <h1>{Duration.fromObject({ seconds: remaining }).toFormat("mm:ss")}</h1>
   );
 };
 
@@ -106,21 +103,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="app">
+        <div>
+          <button onClick={this.start}>START</button>
+          <button onClick={this.reset}>RESET</button>
+          <label>MINUTES:</label>
+          <input
+            type="number"
+            ref={ref => {
+              this.input = ref;
+            }}
+          />
+          <button onClick={this.setTimeout}>SET MINUTES</button>
+        </div>
         <Counter
           remaining={this.state.remaining}
           playing={this.state.playing}
         />
-        <button onClick={this.start}>START</button>
-        <button onClick={this.reset}>RESET</button>
-        <label>MINUTES:</label>
-        <input
-          type="number"
-          ref={ref => {
-            this.input = ref;
-          }}
-        />
-        <button onClick={this.setTimeout}>SET MINUTES</button>
       </div>
     );
   }
